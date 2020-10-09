@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   # any PVC name
-  name: bmk-nfs-pvc
+  name: bmk1-nfs-pvc
 spec:
   storageClassName: manual
   accessModes:
