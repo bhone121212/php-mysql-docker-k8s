@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webserver
+  name: bmkweb
   labels:
-    app: apache
+    app: bmkweb
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: apache
+      app: bmkweb
   template:
     metadata:
       labels:
-        app: apache
+        app: bmkweb
     spec:
       containers:
       - name: php-apache
@@ -26,4 +26,4 @@ spec:
         - name: hostvol
           persistentVolumeClaim:
             # PVC name you created
-            claimName: nfs-pvc
+            claimName: bmkweb-pvc
