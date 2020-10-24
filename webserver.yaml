@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bmkweb
+  name: chitweb
   labels:
-    app: bmkweb
+    app: chitweb
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: bmkweb
+      app: chitweb
   template:
     metadata:
       labels:
-        app: bmkweb
+        app: chitweb
     spec:
       containers:
       - name: php-apache
@@ -26,4 +26,4 @@ spec:
         - name: hostvol
           persistentVolumeClaim:
             # PVC name you created
-            claimName: bmkweb-pvc
+            claimName: chitweb-pvc
