@@ -2,9 +2,9 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   # any PVC name
-  name: bmk1-nfs-pvc
+  name: znphp-pvc
 spec:
-  storageClassName: manual
+  storageClassName: znphp07
   accessModes:
   # ReadWriteMany(RW from multi nodes), ReadWriteOnce(RW from a node), ReadOnlyMany(R from multi nodes)
     - ReadWriteMany
