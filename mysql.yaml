@@ -35,4 +35,4 @@ spec:
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
-          claimName: znmysql-pvc
+          claimName: znmysql-pv
