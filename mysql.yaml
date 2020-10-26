@@ -30,9 +30,9 @@ spec:
         - containerPort: 3306
           name: znmysql8
         volumeMounts:
-          - name: znmysql-persistent-storage
+          - name: znmysql-pv
             mountPath: /var/lib/mysql
       volumes:
-      - name: mysql-persistent-storage
+      - name: znmysql-pv
         persistentVolumeClaim:
           claimName: znmysql-pv
