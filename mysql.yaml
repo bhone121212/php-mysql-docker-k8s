@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: znmysql
+  name: znmysql8
 spec:
   selector:
     matchLabels:
@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
       - image: yenaing/mysql8
-        name: znmysql
+        name: znmysql8
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: .sweetpwd.
+          value: .zarni.
         - name: MYSQL_DATABASE
           value: my_db
         - name: MYSQL_USER
