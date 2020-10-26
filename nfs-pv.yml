@@ -2,9 +2,9 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   # any PV name
-  name: pp-nfs-pv
+  name: znphp-pv
 spec:
-  storageClassName: nfs033
+  storageClassName: znphp07
   capacity:
     # storage size
     storage: 10Gi
@@ -16,6 +16,6 @@ spec:
     Retain
   nfs:
     # NFS server's definition
-    path: /mnt/bmk/data
+    path: /mnt/cloudzarni/data
     server: 192.168.14.10
     readOnly: false
